@@ -1,4 +1,5 @@
 local E_MODEL_SKYBOX_BLIMPCITY = smlua_model_util_get_id("skybox_blimpcity_geo")
+local E_MODEL_SKYBOX_EMERALD = smlua_model_util_get_id("skybox_emerald_geo")
 
 local function bhv_skybox_init(o)
     o.oFlags = OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE
@@ -17,6 +18,13 @@ local function on_level_init()
         spawn_non_sync_object(
             id_bhvSkybox,
             E_MODEL_SKYBOX_BLIMPCITY,
+            gLakituState.pos.x, gLakituState.pos.y, gLakituState.pos.z,
+            nil
+        )
+    elseif gNetworkPlayers[0].currLevelNum == LEVEL_ARENA_EMERALD then
+        spawn_non_sync_object(
+            id_bhvSkybox,
+            E_MODEL_SKYBOX_EMERALD,
             gLakituState.pos.x, gLakituState.pos.y, gLakituState.pos.z,
             nil
         )

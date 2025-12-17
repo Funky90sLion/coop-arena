@@ -39,6 +39,7 @@ LEVEL_ARENA_CITADEL   = level_register('level_arena_citadel_entry',   COURSE_NON
 LEVEL_ARENA_SPIRE     = level_register('level_arena_spire_entry',     COURSE_NONE, 'Spire',     'spire',     28000, 0x08, 0x08, 0x08)
 LEVEL_ARENA_RAINBOW   = level_register('level_arena_rainbow_entry',   COURSE_NONE, 'Rainbow',   'rainbow',   28000, 0x28, 0x28, 0x28)
 LEVEL_ARENA_CITY      = level_register('level_arena_city_entry',      COURSE_NONE, 'City',      'city',      28000, 0x28, 0x28, 0x28)
+LEVEL_ARENA_EMERALD   = level_register('level_arena_emerald_entry',   COURSE_NONE, 'Emerald',   'emerald',   28000, 0x28, 0x28, 0x28)
 
 --- @class ArenaBGM
 --- @field audio               string
@@ -181,10 +182,13 @@ L_CITADEL   = add_level(LEVEL_ARENA_CITADEL,   'Citadel',   "djoslin0",   get_te
 L_SPIRE     = add_level(LEVEL_ARENA_SPIRE,     'Spire',     "djoslin0",   get_texture_info("spire_preview_image")     )
 L_RAINBOW   = add_level(LEVEL_ARENA_RAINBOW,   'Rainbow',   "FunkyLion")
 L_CITY      = add_level(LEVEL_ARENA_CITY,      'City',      "FunkyLion")
+L_EMERALD   = add_level(LEVEL_ARENA_EMERALD,   'Emerald',   "FunkyLion")
 
-add_level_data(L_SPIRE,   { bgm = BGM('snow.ogg', "Frozen Heart Melancholy - MegaBaz (Sonic Gaiden)", 1, 446898, 3566438) } )
+add_level_data(L_SPIRE,   { bgm = BGM('snow.ogg',    "Frozen Heart Melancholy - MegaBaz (Sonic Gaiden)",           1, 446898, 3566438) } )
 add_level_data(L_RAINBOW, { bgm = BGM('rainbow.ogg', "Rainbow Road - FunkyLion") } )
-add_level_data(L_CITY,    { bgm = BGM('city.ogg', "City Outskirts Zone - GeckoYamori (Sonic Megamix)", 1, 70181, 4051293) } )
+add_level_data(L_CITY,    { bgm = BGM('city.ogg',    "City Outskirts Zone - GeckoYamori (Sonic Megamix)",          1, 70181, 4051293) } )
+add_level_data(L_EMERALD, { bgm = BGM('emerald.ogg', "Diamonds in the Sky - Richard Jacques & TJ Davis (Sonic R)", 1, 568081, 12985045) } )
+
 
 -- setup global sync table
 gGlobalSyncTable.gameState = GAME_STATE_ACTIVE
