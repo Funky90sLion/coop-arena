@@ -1,6 +1,5 @@
 -- name: Arena
 -- description: An arena-shooter inspired game mode with custom weapons and levels.\nSeven gamemodes in one, three custom stages, and five weapons.
--- incompatible: gamemode arena
 -- pausable: false
 -- category: gamemode
 
@@ -184,10 +183,9 @@ L_RAINBOW   = add_level(LEVEL_ARENA_RAINBOW,   'Rainbow',   "FunkyLion")
 L_CITY      = add_level(LEVEL_ARENA_CITY,      'City',      "FunkyLion")
 L_EMERALD   = add_level(LEVEL_ARENA_EMERALD,   'Emerald',   "FunkyLion")
 
-add_level_data(L_SPIRE,   { bgm = BGM('snow.ogg',    "Frozen Heart Melancholy - MegaBaz (Sonic Gaiden)",           1, 446898, 3566438) } )
 add_level_data(L_RAINBOW, { bgm = BGM('rainbow.ogg', "Rainbow Road - FunkyLion") } )
 add_level_data(L_CITY,    { bgm = BGM('city.ogg',    "City Outskirts Zone - GeckoYamori (Sonic Megamix)",          1, 70181, 4051293) } )
-add_level_data(L_EMERALD, { bgm = BGM('emerald.ogg', "Diamonds in the Sky - Richard Jacques & TJ Davis (Sonic R)", 1, 568081, 12985045) } )
+add_level_data(L_EMERALD, { bgm = BGM('emerald.mp3', "Diamonds in the Sky - Richard Jacques & TJ Davis (Sonic R)", 1, 568081, 12985045) } )
 
 
 -- setup global sync table
